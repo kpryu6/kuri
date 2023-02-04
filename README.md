@@ -1,8 +1,6 @@
 # kuri
 
-## _Kubernetes + MRI = KURI !
-
-<br>
+## Kubernetes + MRI = KURI !
 
 - Kubernetes Policy Verification System <br>
 
