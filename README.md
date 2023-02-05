@@ -1,4 +1,4 @@
-# kuri
+# KURI
 
 ## KUbernetes + mRI = KURI !
 
