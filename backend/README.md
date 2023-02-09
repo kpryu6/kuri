@@ -1,6 +1,17 @@
 
 # 2023-02-10 2차 발표 백엔드 진행상항
 
+
+---
+
+## 목차
+
+- [1. 진행사항](#1-진행사항)<br>
+- [2. 알고리즘(메서드 구현)](#2-알고리즘메서드-구현)<br>
+- [3. 구현 예정](#3-구현-예정)<br>
+
+
+
 ---
 
 ## 1. 진행사항
@@ -33,8 +44,6 @@
 <br><br> **->** (3) polic의 **ingress, egress정책**을 통해 하나의 파드가 통신가능한 **파드**가 **연결** 
 <br> (`policy.yaml` 파일의 `spec.ingress/spec.egress`를 기준으로 pod select)
 <br> ( 파드 객체는 다음 파드를 필드로 가짐 )
-
-<br>
 
 <details>
 <summary><b>network policy yaml파일 예제(클릭)</b></summary>
