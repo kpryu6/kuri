@@ -1,0 +1,120 @@
+[
+  {
+    "name": "nginx-ui-gni3k",
+    "labels": {
+      "test": "hi"
+    },
+    "namespace": "namespace1",
+    "ip": "1.1.1",
+    "port": "8080",
+    "nextPods": [
+      {
+        "name": "nginx-replicaset-gnd3j",
+        "labels": {
+          "test2": "del",
+          "test": "hello"
+        },
+        "namespace": "namespace1",
+        "ip": "2.2.2",
+        "port": "8000",
+        "nextPods": [
+          {
+            "name": "",
+            "labels": {
+              "test": "hello"
+            },
+            "namespace": "namespace1",
+            "ip": "3.3.3",
+            "port": "53",
+            "nextPods": []
+          }
+        ]
+      },
+      {
+        "name": "pod3",
+        "labels": {
+          "test": "hello"
+        },
+        "namespace": "namespace1",
+        "ip": "3.3.3",
+        "port": "53",
+        "nextPods": []
+      }
+    ]
+  },
+  {
+    "name": "nginx-replicaset-gnd3j",
+    "labels": {
+      "test2": "del",
+      "test": "hello"
+    },
+    "namespace": "namespace1",
+    "ip": "2.2.2",
+    "port": "8000",
+    "nextPods": [
+      {
+        "name": "pod3",
+        "labels": {
+          "test": "hello"
+        },
+        "namespace": "namespace1",
+        "ip": "3.3.3",
+        "port": "53",
+        "nextPods": []
+      }
+    ]
+  },
+  {
+    "name": "pod3",
+    "labels": {
+      "test": "hello"
+    },
+    "namespace": "namespace1",
+    "ip": "3.3.3",
+    "port": "53",
+    "nextPods": []
+  },
+  {
+    "name": "pod4",
+    "labels": {
+      "test2": "del"
+    },
+    "namespace": "namespace1",
+    "ip": "4.4.4",
+    "port": "20",
+    "nextPods": [
+      {
+        "name": "nginx-replicaset-gnd3j",
+        "labels": {
+          "test2": "del",
+          "test": "hello"
+        },
+        "namespace": "namespace1",
+        "ip": "2.2.2",
+        "port": "8000",
+        "nextPods": [
+          {
+            "name": "pod3",
+            "labels": {
+              "test": "hello"
+            },
+            "namespace": "namespace1",
+            "ip": "3.3.3",
+            "port": "53",
+            "nextPods": []
+          }
+        ]
+      },
+      {
+        "name": "pod3",
+        "labels": {
+          "test": "hello"
+        },
+        "namespace": "namespace1",
+        "ip": "3.3.3",
+        "port": "53",
+        "nextPods": []
+      }
+    ]
+  }
+]

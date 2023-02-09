@@ -1,0 +1,34 @@
+{
+  "Pods": [
+    {
+      "Pod": {
+        "name": "PodA",
+        "label": { "label-key": "label-value", "label-key2": "label-value2" },
+        "namespace": "namespaceName",
+        "ip": "1.2.3.4",
+        "port": "8080",
+        "nextPods": { "podName": ["PodB", "PodC"] }
+      }
+    },
+    {
+      "Pod": {
+        "name": "PodB",
+        "label": { "label-key": "label-value" },
+        "namespace": "namespaceName",
+        "ip": "3.2.1.8",
+        "port": "3000",
+        "nextPods": { "podName": ["PodA"] }
+      }
+    },
+    {
+      "Pod": {
+        "name": "PodC",
+        "label": { "label-keys": "label-values" },
+        "namespace": "namespaceName",
+        "ip": "1.11.2.3",
+        "port": "80",
+        "nextPods": { "podName": ["PodB"] }
+      }
+    }
+  ]
+}
