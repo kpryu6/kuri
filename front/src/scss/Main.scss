@@ -1,0 +1,38 @@
+body {
+  background-color: aliceblue;
+  margin-left: 200px;
+}
+.center-top {
+  display: flex;
+  justify-content: center;
+}
+
+.project {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  color: grayscale($color: #333);
+}
+
+.UserPostButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.PolicyPostButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.BackToFront {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 400px;
+}
