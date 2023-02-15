@@ -7,13 +7,10 @@ import FileList from "./UserYaml/FileList";
 import PolicyUpload from "./NetworkPolicy/PolicyUpload";
 import PolicyList from "./NetworkPolicy/PolicyList";
 
-import TockenHost from "./Config/TockenHost";
-
 import UserPostButton from "./UserYaml/UserPostButton";
 import PolicyPostButton from "./NetworkPolicy/PolicyPostButton";
-import BackToFront from "./Graph/BackToFront";
 
-function Version1() {
+function UploadFiles() {
   //사용자 파일 업로드
   const [ufiles, usetFiles] = useState([]);
 
@@ -29,11 +26,9 @@ function Version1() {
   };
 
   return (
-    <div>
-      <h1 className="project">Kubernetes Network Policy</h1>
+    <>
       <div className="center-top">
-        <div>
-          <p className="user"></p>
+        <div className="pod-upload">
           <FileUpload
             files={ufiles}
             setFiles={usetFiles}
@@ -48,9 +43,7 @@ function Version1() {
             />
           </div>
         </div>
-
-        <div>
-          <p className="network_policy"></p>
+        <div className="policy-upload">
           <PolicyUpload
             files={pfiles}
             setFiles={psetFiles}
@@ -65,14 +58,9 @@ function Version1() {
             />
           </div>
         </div>
-
-        <div>
-          <p className="TockenHost"></p>
-          <TockenHost />
-        </div>
       </div>
-    </div>
+    </>
   );
 }
 
-export default Version1;
+export default UploadFiles;

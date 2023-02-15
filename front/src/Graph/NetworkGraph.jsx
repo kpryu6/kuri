@@ -13,24 +13,18 @@ const NetworkGraph = ({ nodes, edges }) => {
         ...node,
         label: node.name,
         shape: "dot",
-        size: 70,
-        font: { size: 30 },
+        size: 40,
+        font: { size: 20 },
       })),
       edges: edges,
     };
     const options = {
-      width: "1000px",
-      height: "1000px",
+      width: "1200px",
+      height: "700px",
       interaction: {
         zoomView: false,
       },
       nodes: {
-        shape: "circle", // 노드 모양 지정
-        size: 30, // 노드의 크기
-        font: {
-          size: 20, // 라벨 폰트 크기
-        },
-
         borderWidth: 4,
         borderWidthSelected: 4,
       },
@@ -56,7 +50,7 @@ const NetworkGraph = ({ nodes, edges }) => {
   }, []);
 
   return (
-    <div className="parent">
+    <div className="parent" style={{ marginLeft: "-280px" }}>
       <h2 id="myNetwork"></h2>
       {selectedNode && (
         <div className="node-info-container">

@@ -4,7 +4,7 @@
     "labels": {
       "test": "hi"
     },
-    "namespace": "namespace1",
+    "namespace": "namespace2",
     "ip": "1.1.1",
     "port": "8080",
     "nextPods": [

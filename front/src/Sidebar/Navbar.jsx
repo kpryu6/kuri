@@ -2,13 +2,13 @@ import React from "react";
 import {
   FaAngleRight,
   FaAngleLeft,
-  FaChartBar,
   FaThLarge,
-  FaShoppingCart,
   FaCog,
   FaSignOutAlt,
   FaBars,
 } from "react-icons/fa";
+import { FiUpload } from "react-icons/fi";
+import { TbChartCircles } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 import "../scss/navbar.scss";
 
@@ -17,7 +17,7 @@ const ICON_SIZE = 30;
 function Navbar({ visible, show }) {
   return (
     <>
-      <div className="mobile-nav">
+      <div className="nav-bar">
         <button className="mobile-nav-btn" onClick={() => show(!visible)}>
           <FaBars size={24} />
         </button>
@@ -31,19 +31,23 @@ function Navbar({ visible, show }) {
           {!visible ? <FaAngleRight size={30} /> : <FaAngleLeft size={30} />}
         </button>
         <div>
-          <NavLink className="logo" to="/"></NavLink>
+          <NavLink className="logo" to="/main">
+            KURI
+          </NavLink>
+          <h2>Kubenetes Network Policy Simulator</h2>
           <div className="links nav-top">
             <NavLink to="/main" className="nav-link">
               <FaThLarge size={ICON_SIZE} />
-              <span>Main</span>
+              <span>Main </span>
             </NavLink>
             <NavLink to="/pods" className="nav-link">
-              <FaChartBar size={ICON_SIZE} />
+              <TbChartCircles size={ICON_SIZE} />
               <span>Pods </span>
             </NavLink>
-            <NavLink to="/policies" className="nav-link">
-              <FaShoppingCart size={ICON_SIZE} />
-              <span>Policies</span>
+
+            <NavLink to="/upload" className="nav-link">
+              <FiUpload size={ICON_SIZE} />
+              <span>Upload</span>
             </NavLink>
           </div>
         </div>

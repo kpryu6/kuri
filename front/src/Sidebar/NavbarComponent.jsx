@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../scss/NavbarComponent.scss";
 import Main from "../Main";
 import Pods from "../Pods";
+import UploadFiles from "../UploadFiles";
+import Login from "../Login";
 function NavbarComponent() {
   const [navVisible, showNavbar] = useState(false);
 
@@ -12,7 +14,16 @@ function NavbarComponent() {
       <div className="NavbarComponent">
         <Navbar visible={navVisible} show={showNavbar} />
         <Routes>
-          <Route path="/" element={<Navigate to="/main" />} />
+          <Route
+            path="/"
+            element={
+              <div className={!navVisible ? "page" : "page page-with-navbar"}>
+                <h1>
+                  <Login />
+                </h1>
+              </div>
+            }
+          />
           <Route
             path="/main"
             element={
@@ -34,13 +45,16 @@ function NavbarComponent() {
             }
           />
           <Route
-            path="/policies"
+            path="/upload"
             element={
               <div className={!navVisible ? "page" : "page page-with-navbar"}>
-                <h1>Policies</h1>
+                <h1>
+                  <UploadFiles />
+                </h1>
               </div>
             }
           />
+
           <Route
             path="/settings"
             element={
