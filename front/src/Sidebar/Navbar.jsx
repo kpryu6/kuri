@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { FiUpload } from "react-icons/fi";
 import { TbChartCircles } from "react-icons/tb";
+import { MdOutlinePolicy } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import "../scss/navbar.scss";
 
@@ -32,6 +33,10 @@ function Navbar({ visible, show }) {
         </button>
         <div>
           <NavLink className="logo" to="/main">
+            <img
+              src="https://user-images.githubusercontent.com/113777043/219305022-a306d523-edfc-430e-b465-00094aca2c39.png"
+              alt="Logo"
+            />
             KURI
           </NavLink>
           <h2>Kubenetes Network Policy Simulator</h2>
@@ -43,6 +48,11 @@ function Navbar({ visible, show }) {
             <NavLink to="/pods" className="nav-link">
               <TbChartCircles size={ICON_SIZE} />
               <span>Pods </span>
+            </NavLink>
+
+            <NavLink to="/policies" className="nav-link">
+              <MdOutlinePolicy size={ICON_SIZE} />
+              <span>Policies </span>
             </NavLink>
 
             <NavLink to="/upload" className="nav-link">

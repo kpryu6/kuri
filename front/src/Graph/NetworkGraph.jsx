@@ -1,4 +1,5 @@
 import { Network } from "vis-network";
+
 import React, { useState, useEffect } from "react";
 
 import "./../scss/NetworkGraph.scss";
@@ -13,20 +14,29 @@ const NetworkGraph = ({ nodes, edges }) => {
         ...node,
         label: node.name,
         shape: "dot",
-        size: 40,
+        size: 50,
         font: { size: 20 },
+        color: {
+          background: "#18415c",
+          border: "#0a1d2a",
+          highlight: {
+            background: "#18415c",
+            border: "#0a1d2a",
+          },
+        },
       })),
       edges: edges,
     };
     const options = {
       width: "1200px",
       height: "700px",
+
       interaction: {
         zoomView: false,
       },
       nodes: {
         borderWidth: 4,
-        borderWidthSelected: 4,
+        borderWidthSelected: 10,
       },
       edges: {
         width: 5, // ¿§Áö ±½±â
@@ -37,6 +47,9 @@ const NetworkGraph = ({ nodes, edges }) => {
         },
         smooth: {
           type: "curvedCCW", // ¿§Áö ¸ð¾ç ÁöÁ¤
+        },
+        arrows: {
+          to: { enabled: true, scaleFactor: 0.5, type: "arrow" },
         },
       },
     };

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../scss/NavbarComponent.scss";
 import Main from "../Main";
-import Pods from "../Pods";
+import Pods from "./PodInside/Pods";
 import UploadFiles from "../UploadFiles";
 import Login from "../Login";
 function NavbarComponent() {

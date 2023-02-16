@@ -27,7 +27,7 @@ function UploadFiles() {
 
   return (
     <>
-      <div className="center-top">
+      <div className="uploadfiles">
         <div className="pod-upload">
           <FileUpload
             files={ufiles}

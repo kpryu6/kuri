@@ -21,11 +21,13 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-js-pagination": "^3.0.3",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-switch": "^7.0.0",
     "sass": "^1.57.1",
     "semantic-ui-react": "^2.1.4",
+    "styled-components": "^5.3.6",
     "vis-network": "^9.1.2",
     "web-vitals": "^2.1.4",
     "yamljs": "^0.3.0"

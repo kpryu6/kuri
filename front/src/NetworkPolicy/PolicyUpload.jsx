@@ -7,11 +7,8 @@ const PolicyUpload = ({ files, setFiles }) => {
   console.log(files);
   const uploadHandler = (event) => {
     const file = event.target.files[0];
-
     file.isUploading = true;
-    //Policy ????? ?????
     setFiles([...files, file]);
-    //?? ??? ?? ??
   };
 
   return (
@@ -19,7 +16,11 @@ const PolicyUpload = ({ files, setFiles }) => {
       <div className="card">
         <div className="inputs">
           <input type="file" onChange={uploadHandler} />
-          <button>
+          <button
+            onClick={() => {
+              document.querySelector('input[type="file"]').click();
+            }}
+          >
             <i>
               <FontAwesomeIcon icon={faPlus} />
             </i>
