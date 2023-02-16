@@ -16,14 +16,6 @@ const NetworkGraph = ({ nodes, edges }) => {
         shape: "dot",
         size: 50,
         font: { size: 20 },
-        color: {
-          background: "#18415c",
-          border: "#0a1d2a",
-          highlight: {
-            background: "#18415c",
-            border: "#0a1d2a",
-          },
-        },
       })),
       edges: edges,
     };
@@ -37,6 +29,14 @@ const NetworkGraph = ({ nodes, edges }) => {
       nodes: {
         borderWidth: 4,
         borderWidthSelected: 10,
+        color: {
+          background: "#18415c",
+          border: "#0a1d2a",
+          highlight: {
+            background: "#18415c",
+            border: "#0a1d2a",
+          },
+        },
       },
       edges: {
         width: 5, // ¿§Áö ±½±â
