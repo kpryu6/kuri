@@ -2,7 +2,8 @@
 
 
 
-<p><img src="https://user-images.githubusercontent.com/113777043/219279140-d82c1170-faa7-4acc-a5c6-1d97c164646e.png" width = "30%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/219296304-4bf70111-43cc-4698-8181-fef1e913ecce.jpg" width = "40%"></p>
+
 
 
 ## KUbernetes + mRI = KURI
