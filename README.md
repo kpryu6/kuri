@@ -1,6 +1,12 @@
 # KURI
 
-## KUbernetes + mRI = KURI !
+
+
+<p><img src="https://user-images.githubusercontent.com/113777043/219279140-d82c1170-faa7-4acc-a5c6-1d97c164646e.png" width = "30%"></p>
+
+
+## KUbernetes + mRI = KURI
+
 
 - Kubernetes Policy Verification System <br>
 
