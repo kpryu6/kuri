@@ -1,11 +1,11 @@
 .node-info-container {
   position: absolute;
-  right: 0;
-  top: 0;
-  min-width: 10px;
-  min-height: 10px;
+
+  min-width: 100px;
+  min-height: 100px;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 5px solid gray;
+  border: 5px solid black;
+  border-radius: 10px;
   padding: 20px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -13,18 +13,30 @@
   align-items: center;
 
   .node-info {
-    h1 {
-      font-size: 30px;
-      text-align: center;
-    }
-    h2 {
-      font-size: 30px;
-      margin: 0;
-    }
-
     p {
-      font-size: 20px;
-      margin-top: 30px;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.edge-info-container {
+  position: absolute;
+  min-width: 100px;
+  min-height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .edge-info {
+    p {
+      font-size: 15px;
+      margin-top: 10px;
     }
   }
 }

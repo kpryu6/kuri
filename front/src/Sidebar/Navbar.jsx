@@ -6,6 +6,7 @@ import {
   FaCog,
   FaSignOutAlt,
   FaBars,
+  FaGithub,
 } from "react-icons/fa";
 import { FiUpload } from "react-icons/fi";
 import { TbChartCircles } from "react-icons/tb";
@@ -18,19 +19,7 @@ const ICON_SIZE = 30;
 function Navbar({ visible, show }) {
   return (
     <>
-      <div className="nav-bar">
-        <button className="mobile-nav-btn" onClick={() => show(!visible)}>
-          <FaBars size={24} />
-        </button>
-      </div>
-      <nav className={!visible ? "navbar" : ""}>
-        <button
-          type="button"
-          className="nav-btn"
-          onClick={() => show(!visible)}
-        >
-          {!visible ? <FaAngleRight size={30} /> : <FaAngleLeft size={30} />}
-        </button>
+      <nav className="navbar">
         <div>
           <NavLink className="logo" to="/main">
             <img
@@ -63,9 +52,9 @@ function Navbar({ visible, show }) {
         </div>
 
         <div className="links">
-          <NavLink to="/settings" className="nav-link">
-            <FaCog size={ICON_SIZE} />
-            <span>Settings</span>
+          <NavLink to="https://github.com/boanlab/kuri" className="nav-link">
+            <FaGithub size={ICON_SIZE} />
+            <span>GitHub</span>
           </NavLink>
           <NavLink to="/Sign-out" className="nav-link">
             <FaSignOutAlt size={ICON_SIZE} />

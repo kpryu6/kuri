@@ -41,17 +41,6 @@ const BackToFront = () => {
 
   return (
     <div>
-      <div className="namespace-buttons">
-        {namespaces.map((namespace, index) => (
-          <button
-            key={index}
-            onClick={() => setSelectedNamespace(namespace)}
-            className={selectedNamespace === namespace ? "active" : ""}
-          >
-            {namespace}
-          </button>
-        ))}
-      </div>
       <NetworkGraph
         nodes={nodes}
         setNodes={setNodes}

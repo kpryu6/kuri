@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../scss/NavbarComponent.scss";
 import Main from "../Main";
 import Pods from "./PodInside/Pods";
+import Policy from "./Policy/Policy";
 import UploadFiles from "../UploadFiles";
 import Login from "../Login";
 function NavbarComponent() {
@@ -40,6 +41,16 @@ function NavbarComponent() {
               <div className={!navVisible ? "page" : "page page-with-navbar"}>
                 <h1>
                   <Pods />
+                </h1>
+              </div>
+            }
+          />
+          <Route
+            path="/policies"
+            element={
+              <div className={!navVisible ? "page" : "page page-with-navbar"}>
+                <h1>
+                  <Policy />
                 </h1>
               </div>
             }

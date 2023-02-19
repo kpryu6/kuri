@@ -1,0 +1,99 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.pod-list {
+  .pod-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .table-head {
+    background-color: #18415c;
+  }
+
+  $table-bg: #f8f9fa;
+  $table-border: #dee2e6;
+  $table-head-bg: #18415c;
+  $table-head-color: #fff;
+
+  .table {
+    font-size: 18px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: $table-bg;
+    color: #000000;
+    border: 1px solid $table-border;
+    border-radius: 20px;
+
+    th,
+    td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 2px solid $table-border;
+    }
+    thead {
+      background-color: $table-head-bg;
+      color: $table-head-color;
+      th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $table-border;
+      }
+    }
+    tbody {
+      td {
+        border-top: none;
+      }
+      tr:nth-child(even) {
+      }
+    }
+    th {
+      text-align: left;
+    }
+  }
+
+  $color-primary: #18415c;
+  $color-secondary: #e2e2e2;
+
+  .PaginationBox {
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $color-secondary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        &:first-child {
+          border-radius: 5px 0 0 5px;
+        }
+        &:last-child {
+          border-radius: 0 5px 5px 0;
+        }
+        a {
+          text-decoration: none;
+          color: $color-primary;
+          font-size: 1rem;
+          &:hover,
+          &.active {
+            color: black;
+          }
+        }
+        &.active {
+          background-color: $color-primary;
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+}
