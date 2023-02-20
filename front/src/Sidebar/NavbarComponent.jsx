@@ -7,6 +7,7 @@ import Pods from "./PodInside/Pods";
 import Policy from "./Policy/Policy";
 import UploadFiles from "../UploadFiles";
 import Login from "../Login";
+
 function NavbarComponent() {
   const [navVisible, showNavbar] = useState(false);
 

@@ -1,13 +1,84 @@
+$color-primary: #18415c;
+$color-secondary: #e2e2e2;
 body {
   font-family: "Roboto", sans-serif;
 }
+
 .pod-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
   .pod-title {
-    font-size: 30px;
+    font-size: 35px;
+    margin-top: 30px;
     margin-bottom: 10px;
+    text-align: center;
   }
-  .table-head {
-    background-color: #18415c;
+  h1 {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+    color: #3d3c3c;
+  }
+  .up-table {
+    display: flex;
+    flex-direction: row;
+
+    .search-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 1rem;
+      input {
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+          border-color: #18415c;
+        }
+      }
+    }
+
+    .per-page-select {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: auto;
+      margin-bottom: 10px;
+    }
+
+    .per-page {
+      padding: 0.5rem;
+      font-size: 18px;
+      width: 100%;
+    }
+
+    .per-page-select select {
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      border: 1px solid #ccc;
+      width: 100%;
+      background-color: #fff;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+        border-color: #18415c;
+      }
+    }
+
+    .table-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .per-page-select {
+        margin-left: auto;
+      }
+    }
   }
 
   $table-bg: #f8f9fa;
@@ -17,13 +88,17 @@ body {
 
   .table {
     font-size: 18px;
-    border-collapse: collapse;
+    border-radius: 10px;
     width: 100%;
-    margin-bottom: 1rem;
+    table-layout: fixed;
     background-color: $table-bg;
+    margin-right: 10px;
+
+    margin-bottom: 1rem;
+
     color: #000000;
     border: 1px solid $table-border;
-    border-radius: 20px;
+    border-spacing: 0;
 
     th,
     td {
@@ -34,6 +109,8 @@ body {
     thead {
       background-color: $table-head-bg;
       color: $table-head-color;
+      border-radius: 10px;
+
       th {
         vertical-align: bottom;
         border-bottom: 2px solid $table-border;
@@ -43,57 +120,59 @@ body {
       td {
         border-top: none;
       }
-      tr:nth-child(even) {
+
+      th {
+        text-align: left;
       }
-    }
-    th {
-      text-align: left;
+      tr {
+        cursor: pointer;
+      }
+      tr.selected {
+        background-color: #e2e2e2;
+      }
     }
   }
+}
 
-  $color-primary: #18415c;
-  $color-secondary: #e2e2e2;
-
-  .PaginationBox {
-    .pagination {
+.PaginationBox {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    li {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $color-secondary;
       display: flex;
       justify-content: center;
-      margin-top: 15px;
-      li {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border: 1px solid $color-secondary;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      align-items: center;
+      font-size: 1rem;
+      &:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+      &:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+      a {
+        text-decoration: none;
+        color: $color-primary;
         font-size: 1rem;
-        &:first-child {
-          border-radius: 5px 0 0 5px;
-        }
-        &:last-child {
-          border-radius: 0 5px 5px 0;
-        }
-        a {
-          text-decoration: none;
-          color: $color-primary;
-          font-size: 1rem;
-          &:hover,
-          &.active {
-            color: black;
-          }
-        }
+        &:hover,
         &.active {
-          background-color: $color-primary;
-          a {
-            color: white;
-          }
+          color: black;
+        }
+      }
+      &.active {
+        background-color: $color-primary;
+        a {
+          color: white;
         }
       }
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
   }
 }
