@@ -5,16 +5,15 @@ import {
   faSpinner,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
-import "./../scss/Item.scss";
+import "../../../scss/Item.scss";
 
-const PolicyItem = ({ file, deleteFile }) => {
+const FileItem = ({ file, deleteFile }) => {
   return (
     <>
-      <li className="policy-item" key={file.name}>
+      <li className="item" key={file.name}>
         <FontAwesomeIcon icon={faFileUpload} />
         <p>{file.name}</p>
         <div className="actions">
-          <div className="loading"></div>
           {file.isUploading && (
             <FontAwesomeIcon
               icon={faSpinner}
@@ -34,4 +33,4 @@ const PolicyItem = ({ file, deleteFile }) => {
   );
 };
 
-export default PolicyItem;
+export default FileItem;

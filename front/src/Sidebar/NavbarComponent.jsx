@@ -3,9 +3,9 @@ import Navbar from "./Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../scss/NavbarComponent.scss";
 import Main from "../Main";
-import Pods from "./PodInside/Pods";
-import Policy from "./Policy/Policy";
-import UploadFiles from "../UploadFiles";
+import Pods from "./Pods/Pods";
+import Policies from "./Policy/Policies";
+import UploadFiles from "./Upload/UploadFiles";
 import Login from "../Login";
 
 function NavbarComponent() {
@@ -51,7 +51,7 @@ function NavbarComponent() {
             element={
               <div className={!navVisible ? "page" : "page page-with-navbar"}>
                 <h1>
-                  <Policy />
+                  <Policies />
                 </h1>
               </div>
             }
@@ -63,15 +63,6 @@ function NavbarComponent() {
                 <h1>
                   <UploadFiles />
                 </h1>
-              </div>
-            }
-          />
-
-          <Route
-            path="/settings"
-            element={
-              <div className={!navVisible ? "page" : "page page-with-navbar"}>
-                <h1>Settings</h1>
               </div>
             }
           />

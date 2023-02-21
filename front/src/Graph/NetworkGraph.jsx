@@ -118,18 +118,21 @@ const NetworkGraph = ({ nodes, edges }) => {
       {selectedNode && (
         <div className="node-info-container">
           <div className="node-info">
-            <p>Namespace: {selectedNode.namespace}</p>
-            <p>Labels:</p>
+            <p>name: {selectedNode.name}</p>
+            <p>namespace: {selectedNode.namespace}</p>
+            <p>labels:</p>
+            <p>{"{"} </p>
             {Object.entries(selectedNode.label).map(([key, value]) => (
               <p key={key} style={{ paddingLeft: "20px" }}>
-                - {key}: {value}
+                "{key}" : "{value}"
               </p>
             ))}
-            <p>Network:</p>
-            <p style={{ paddingLeft: "20px" }}>- ip: {selectedNode.ip}</p>
-            <p>Service:</p>
-            <p style={{ paddingLeft: "20px" }}>- port: {selectedNode.port}</p>
-            <p>Container Image</p>
+            <p>{"}"} </p>
+
+            <p>ip: {selectedNode.ip}</p>
+
+            <p>port: {selectedNode.port}</p>
+            <p>image: nginx</p>
           </div>
         </div>
       )}

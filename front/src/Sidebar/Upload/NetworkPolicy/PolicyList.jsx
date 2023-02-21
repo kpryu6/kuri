@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import PolicyItem from "./PolicyItem";
 import Scrollbars from "react-custom-scrollbars";
-import "./../scss/Scrollbar.scss";
+import "../../../scss/Scrollbar.scss";
 
 const PolicyList = ({ files, removeFile }) => {
   const deleteFileHandler = (_name) => {

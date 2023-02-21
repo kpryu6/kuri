@@ -1,4 +1,4 @@
-import "./scss/UploadFiles.scss";
+import "../../scss/UploadFiles.scss";
 import React, { useState } from "react";
 
 import FileUpload from "./UserYaml/FileUpload";
@@ -29,11 +29,7 @@ function UploadFiles() {
     <>
       <div className="uploadfiles">
         <div className="pod-upload">
-          <FileUpload
-            files={ufiles}
-            setFiles={usetFiles}
-            removeFile={uremoveFile}
-          />
+          <FileUpload files={ufiles} setFiles={usetFiles} />
           <FileList files={ufiles} removeFile={uremoveFile} />
           <div className="UserPostButton">
             <UserPostButton
@@ -44,11 +40,7 @@ function UploadFiles() {
           </div>
         </div>
         <div className="policy-upload">
-          <PolicyUpload
-            files={pfiles}
-            setFiles={psetFiles}
-            removeFile={premoveFile}
-          />
+          <PolicyUpload files={pfiles} setFiles={psetFiles} />
           <PolicyList files={pfiles} removeFile={premoveFile} />
           <div className="PolicyPostButton">
             <PolicyPostButton

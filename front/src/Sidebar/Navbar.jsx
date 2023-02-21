@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  FaAngleRight,
-  FaAngleLeft,
-  FaThLarge,
-  FaCog,
-  FaSignOutAlt,
-  FaBars,
-  FaGithub,
-} from "react-icons/fa";
+import { FaThLarge, FaGithub } from "react-icons/fa";
+import { BiHelpCircle } from "react-icons/bi";
 import { FiUpload } from "react-icons/fi";
 import { TbChartCircles } from "react-icons/tb";
 import { MdOutlinePolicy } from "react-icons/md";
@@ -56,9 +49,9 @@ function Navbar({ visible, show }) {
             <FaGithub size={ICON_SIZE} />
             <span>GitHub</span>
           </NavLink>
-          <NavLink to="/Sign-out" className="nav-link">
-            <FaSignOutAlt size={ICON_SIZE} />
-            <span>Logout</span>
+          <NavLink to="/" className="nav-link">
+            <BiHelpCircle size={ICON_SIZE} />
+            <span>Help</span>
           </NavLink>
         </div>
       </nav>

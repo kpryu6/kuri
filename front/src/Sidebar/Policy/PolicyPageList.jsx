@@ -1,44 +1,48 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
-
-import "../../scss/PodList.scss";
-
-const PodsList = () => {
-  const [podData, setPodData] = useState([]);
+import { MdOutlinePolicy } from "react-icons/md";
+import "../../scss/PolicyPageList.scss";
+import { GrSearch } from "react-icons/gr";
+const PolicyPageList = () => {
+  const [policyData, setpolicyData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
 
   const [searchValue, setSearchValue] = useState("");
-  const [filteredPods, setFilteredPods] = useState([]);
+  const [filteredPolicies, setFilteredPolicies] = useState([]);
 
   const [selectedId, setSelectedId] = useState(null);
 
   // 파드 리스트
   useEffect(() => {
-    const testPods = Array.from({ length: 30 }, (_, i) => ({
+    const testPolicies = Array.from({ length: 35 }, (_, i) => ({
       id: i + 1,
-      name: `Kubernetes Pod Name${(i % 2) + 1}`,
-      namespace: "NAMESPACE1",
-      restarts: "SORRY",
-      podIp: i % 2 === 0 ? "111.111.111.111" : "111.111.111.333",
+      name: `Policy Name${(i % 2) + 1}`,
+      namespace: "default",
+      container_image: "nginx",
+      ingress: "ingress",
+      egress: "engress",
     }));
-    setPodData(testPods);
+    setpolicyData(testPolicies);
   }, []);
 
   //파드 검색
   useEffect(() => {
-    const filtered = podData.filter((pod) =>
-      pod.name.toLowerCase().includes(searchValue.toLowerCase())
+    const filtered = policyData.filter((policy) =>
+      policy.name.toLowerCase().includes(searchValue.toLowerCase())
     );
-    setFilteredPods(filtered);
+    setFilteredPolicies(filtered);
     setCurrentPage(1);
-  }, [searchValue, podData]);
+  }, [searchValue, policyData]);
 
   const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredPods.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredPolicies.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   const handleClick = (id) => {
     if (selectedId === id) {
@@ -48,25 +52,26 @@ const PodsList = () => {
     }
   };
 
-  const renderRow = (pod) => {
-    const isSelected = selectedId === pod.id;
+  const renderRow = (policy) => {
+    const isSelected = selectedId === policy.id;
     return (
-      <React.Fragment key={pod.id}>
+      <React.Fragment key={policy.id}>
         <tr
           className={isSelected ? "selected" : ""}
-          onClick={() => handleClick(pod.id)}
+          onClick={() => handleClick(policy.id)}
         >
-          <td>{pod.id}</td>
-          <td>{pod.name}</td>
-          <td>{pod.namespace}</td>
-          <td>{pod.restarts}</td>
-          <td>{pod.podIp}</td>
+          <td>{policy.id}</td>
+          <td>{policy.name}</td>
+          <td>{policy.namespace}</td>
+          <td>{policy.container_image}</td>
+          <td>{policy.ingress}</td>
+          <td>{policy.engress}</td>
           <td>{isSelected ? "-" : "+"}</td>
         </tr>
         {isSelected && (
           <tr>
             <td colSpan={6} className="detail">
-              Pod Details
+              Policy Details
             </td>
           </tr>
         )}
@@ -75,11 +80,17 @@ const PodsList = () => {
   };
 
   return (
-    <div className="pod-list">
-      <div className="pod-title">Pods</div>
+    <div className="policy-list">
+      <div className="policy-title">
+        <i>
+          <MdOutlinePolicy size="30" />
+        </i>
+        Policies
+      </div>
 
       <div className="up-table">
         <div className="search-box">
+          <GrSearch size="30" />
           <input
             type="text"
             placeholder="Type in to Search"
@@ -107,19 +118,20 @@ const PodsList = () => {
             <th>#</th>
             <th>NAME</th>
             <th>NAMESPACE</th>
-            <th>RESTARTS</th>
-            <th>POD IP</th>
-            <th></th>
+            <th>CONTAINER IMAGE</th>
+            <th>INGRESS</th>
+            <th>ENGRESS</th>
+            <th>DETAIL</th>
           </tr>
         </thead>
         <tbody>{currentItems.map(renderRow)}</tbody>
       </table>
 
-      <div className="PaginationBox">
+      <div className="Policy-PaginationBox">
         <Pagination
           activePage={currentPage}
           itemsCountPerPage={itemsPerPage}
-          totalItemsCount={podData.length}
+          totalItemsCount={policyData.length}
           pageRangeDisplayed={5}
           onChange={handlePageChange}
         ></Pagination>
@@ -128,4 +140,4 @@ const PodsList = () => {
   );
 };
 
-export default PodsList;
+export default PolicyPageList;

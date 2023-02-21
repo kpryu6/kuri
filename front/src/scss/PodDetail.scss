@@ -1,0 +1,22 @@
+.pod-details {
+  display: flex;
+
+  .pod-yaml {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #888888;
+  }
+
+  .next-pod {
+    margin-left: 50px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #888888;
+  }
+}

@@ -5,19 +5,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.pod-list {
-  margin-left: -250px;
+.policy-list {
+  margin-left: -150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 
-  .pod-title {
+  .policy-title {
     font-size: 40px;
-
     margin-top: 30px;
     margin-bottom: 10px;
     text-align: center;
-    width: 170%;
+    width: 145%;
   }
   h1 {
     font-size: 20px;
@@ -27,7 +26,7 @@ body {
   .up-table {
     display: flex;
     flex-direction: row;
-    width: 170%;
+    width: 145%;
 
     .search-box {
       display: flex;
@@ -96,7 +95,7 @@ body {
   .table {
     font-size: 18px;
     border-radius: 10px;
-    width: 170%;
+    width: 145%;
 
     background-color: $table-bg;
     margin-right: 10px;
@@ -119,10 +118,16 @@ body {
     }
 
     .table-head th:nth-child(4) {
-      width: 40%;
+      width: 20%;
     }
 
     .table-head th:nth-child(5) {
+      width: 10%;
+    }
+    .table-head th:nth-child(6) {
+      width: 10%;
+    }
+    .table-head th:nth-child(6) {
       width: 5%;
     }
 
@@ -156,8 +161,8 @@ body {
   }
 }
 
-.PaginationBox {
-  width: 170%;
+.Policy-PaginationBox {
+  width: 145%;
   .pagination {
     display: flex;
     justify-content: center;

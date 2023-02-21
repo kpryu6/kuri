@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import "./../scss/PostButton.scss";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import "../../../scss/PostButton.scss";
 import axios from "axios";
 
 const UserPostButton = ({ files, setFiles, removeFile }) => {
@@ -66,7 +66,7 @@ const UserPostButton = ({ files, setFiles, removeFile }) => {
       <div className="submit">
         <button onClick={submitHandler}>
           <i>
-            <FontAwesomeIcon icon={faCheckCircle} />
+            <FontAwesomeIcon icon={faLocationArrow} />
           </i>
           Sumbit
         </button>

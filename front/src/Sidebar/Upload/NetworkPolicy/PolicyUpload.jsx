@@ -1,11 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import "../scss/Upload.scss";
+import "../../../scss/Upload.scss";
 
 const PolicyUpload = ({ files, setFiles }) => {
   console.log(files);
-  const uploadHandler = (event) => {
+  const policyUploadHandler = (event) => {
     const file = event.target.files[0];
     file.isUploading = true;
     setFiles([...files, file]);
@@ -14,11 +14,13 @@ const PolicyUpload = ({ files, setFiles }) => {
   return (
     <>
       <div className="card">
-        <div className="inputs">
-          <input type="file" onChange={uploadHandler} />
+        <div className="policy-inputs">
+          <input type="file" onChange={policyUploadHandler} />
           <button
             onClick={() => {
-              document.querySelector('input[type="file"]').click();
+              document
+                .querySelector('.policy-inputs input[type="file"]')
+                .click();
             }}
           >
             <i>
