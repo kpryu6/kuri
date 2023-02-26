@@ -123,7 +123,7 @@ const NetworkGraph = ({ nodes, edges }) => {
             <p>labels:</p>
             <p>{"{"} </p>
             {Object.entries(selectedNode.label).map(([key, value]) => (
-              <p key={key} style={{ paddingLeft: "20px" }}>
+              <p key={key} style={{ paddingLeft: "10px" }}>
                 "{key}" : "{value}"
               </p>
             ))}
@@ -139,6 +139,15 @@ const NetworkGraph = ({ nodes, edges }) => {
       {selectedEdge && (
         <div className="edge-info-container">
           <div className="edge-info">
+            <p>name: policy-name</p>
+            <p>namespace: default</p>
+            <p>labels:</p>
+
+            <p>ingress:</p>
+            <p style={{ paddingLeft: "10px" }}>from:</p>
+            <p style={{ paddingLeft: "20px" }}>ipBlock</p>
+            <p>egress:</p>
+
             <p>from: {selectedEdge.from} </p>
             <p>to: {selectedEdge.to} </p>
           </div>

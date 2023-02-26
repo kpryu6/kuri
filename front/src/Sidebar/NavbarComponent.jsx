@@ -14,7 +14,6 @@ function NavbarComponent() {
   return (
     <BrowserRouter>
       <div className="NavbarComponent">
-        <Navbar visible={navVisible} show={showNavbar} />
         <Routes>
           <Route
             path="/"
@@ -30,6 +29,7 @@ function NavbarComponent() {
             path="/main"
             element={
               <div className={!navVisible ? "page" : "page page-with-navbar"}>
+                <Navbar visible={navVisible} show={showNavbar} />
                 <h1>
                   <Main />
                 </h1>
@@ -40,6 +40,7 @@ function NavbarComponent() {
             path="/pods"
             element={
               <div className={!navVisible ? "page" : "page page-with-navbar"}>
+                <Navbar visible={navVisible} show={showNavbar} />
                 <h1>
                   <Pods />
                 </h1>
@@ -50,6 +51,7 @@ function NavbarComponent() {
             path="/policies"
             element={
               <div className={!navVisible ? "page" : "page page-with-navbar"}>
+                <Navbar visible={navVisible} show={showNavbar} />
                 <h1>
                   <Policies />
                 </h1>
@@ -60,6 +62,7 @@ function NavbarComponent() {
             path="/upload"
             element={
               <div className={!navVisible ? "page" : "page page-with-navbar"}>
+                <Navbar visible={navVisible} show={showNavbar} />
                 <h1>
                   <UploadFiles />
                 </h1>

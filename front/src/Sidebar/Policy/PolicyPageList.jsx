@@ -3,6 +3,8 @@ import Pagination from "react-js-pagination";
 import { MdOutlinePolicy } from "react-icons/md";
 import "../../scss/PolicyPageList.scss";
 import { GrSearch } from "react-icons/gr";
+import PolicyPageDetail from "./PolicyPageDetail";
+
 const PolicyPageList = () => {
   const [policyData, setpolicyData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,7 +23,7 @@ const PolicyPageList = () => {
       namespace: "default",
       container_image: "nginx",
       ingress: "ingress",
-      egress: "engress",
+      egress: "egress",
     }));
     setpolicyData(testPolicies);
   }, []);
@@ -65,13 +67,13 @@ const PolicyPageList = () => {
           <td>{policy.namespace}</td>
           <td>{policy.container_image}</td>
           <td>{policy.ingress}</td>
-          <td>{policy.engress}</td>
+          <td>{policy.egress}</td>
           <td>{isSelected ? "-" : "+"}</td>
         </tr>
         {isSelected && (
           <tr>
-            <td colSpan={6} className="detail">
-              Policy Details
+            <td colSpan={7}>
+              <PolicyPageDetail />
             </td>
           </tr>
         )}
@@ -101,7 +103,6 @@ const PolicyPageList = () => {
         <div className="per-page-select">
           <label className="per-page">Show</label>
           <select
-            id="per-page"
             value={itemsPerPage}
             onChange={(e) => setItemsPerPage(Number(e.target.value))}
           >
@@ -120,7 +121,7 @@ const PolicyPageList = () => {
             <th>NAMESPACE</th>
             <th>CONTAINER IMAGE</th>
             <th>INGRESS</th>
-            <th>ENGRESS</th>
+            <th>EGRESS</th>
             <th>DETAIL</th>
           </tr>
         </thead>

@@ -49,7 +49,7 @@ function Navbar({ visible, show }) {
             <FaGithub size={ICON_SIZE} />
             <span>GitHub</span>
           </NavLink>
-          <NavLink to="/" className="nav-link">
+          <NavLink to="https://github.com/boanlab/kuri" className="nav-link">
             <BiHelpCircle size={ICON_SIZE} />
             <span>Help</span>
           </NavLink>

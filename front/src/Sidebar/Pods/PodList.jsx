@@ -5,7 +5,7 @@ import { GrSearch } from "react-icons/gr";
 import "../../scss/PodList.scss";
 import PodDetail from "./PodDetail";
 
-const PodsList = () => {
+const PodsList = ({ files, setFiles }) => {
   const [podData, setPodData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -20,7 +20,7 @@ const PodsList = () => {
     const testPods = Array.from({ length: 35 }, (_, i) => ({
       id: i + 1,
       name: `Kubernetes Pod Name${(i % 2) + 1}`,
-      namespace: "NAMESPACE1",
+      namespace: "default",
       container_image: "nginx",
     }));
     setPodData(testPods);

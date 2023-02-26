@@ -1,16 +1,32 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.scss";
+import Cookies from "js-cookie";
 
 function Login() {
   const [host, setHost] = useState("");
   const [token, setToken] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+
+  const onLoginSuccess = () => {
+    navigate("/main");
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("host:", host, "token:", token);
-    navigate("/main");
+    // check if host and token are valid
+    if (host.trim() === "" || token.trim() === "") {
+      setErrorMessage("Invalid input. Please enter a valid host and token.");
+      return;
+    }
+    // make API call to check if host and token are correct
+    // ...
+
+    // if login is successful
+    Cookies.set("host", host, { expires: 1 }); // save host information to cookie for 1 day
+    Cookies.set("token", token, { expires: 1 }); // save token information to cookie for 1 day
+    onLoginSuccess();
   };
 
   return (
@@ -23,6 +39,7 @@ function Login() {
         />
         <h1>Welcome to KURI</h1>
         <h2>Sign in</h2>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <div className="input-box">
           <label>
             <span></span>
@@ -48,10 +65,8 @@ function Login() {
           </label>
         </div>
         <div className="button-container">
-          <button type="submit" onClick={handleSubmit}>
-            Submit
-          </button>
-          <button type="submit" onClick={handleSubmit}>
+          <button type="submit">Submit</button>
+          <button type="submit" onClick={() => navigate("/main")}>
             Guest
           </button>
         </div>
