@@ -11,11 +11,8 @@
 
 - Kubernetes Policy Verification System <br>
 
-- 쿠버네티스 보안 정책 검증 (시뮬레이션) 시스템
-
-
 ---
-
+<!--
 ## 👨‍👨‍👦 프로젝트 3조 구성원
 
 <table>
@@ -32,3 +29,4 @@
     <td align="center"> 👦🏻 김규민 (백엔드)</td>
   </tr>
 </table>
+-->
