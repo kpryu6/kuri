@@ -1,0 +1,54 @@
+.pod-details {
+    display: flex;
+    height: 400px;
+  
+    .pod-yaml {
+      background-color: #f9f9f9;
+      padding: 20px;
+      width: 500px;
+      height: 400px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px #888888;
+    }
+  
+    .flex-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pod_and_policy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .next-pod {
+      margin-left: 50px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      width: 265px;
+      height: 180px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px #888888;
+      margin-bottom: 20px;
+    }
+  
+    .policy-about-pod {
+      background-color: #f9f9f9;
+      padding: 20px;
+      width: 265px;
+      height: 180px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px #888888;
+    }
+    .pod-detail-result {
+      margin-left: 50px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      width: 580px;
+      height: 180px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px #888888;
+    }
+  }
+  

@@ -1,0 +1,40 @@
+.policy-details {
+  display: flex;
+  max-width: 1150px;
+  height: 400px;
+
+  .policy-yaml {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 500px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #888888;
+  }
+
+  .flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .start-next {
+    margin-left: 50px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 580px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #888888;
+  }
+
+  .policy-detail-result {
+    margin-left: 50px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 580px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #888888;
+  }
+}
