@@ -1,0 +1,46 @@
+.pod-detail {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.container-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container-info {
+  margin-bottom: 10px;
+}
+
+.container-name {
+  font-weight: bold;
+}
+
+.container-details {
+  margin-top: 10px;
+}
+
+.container-property {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.container-property label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.container-property-value {
+  margin-left: 5px;
+}
+
+/* 추가한 스타일 */
+.box {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
